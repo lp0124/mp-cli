@@ -1,0 +1,65 @@
+// @if weixin
+button[type='primary'] {
+  background-color: #07c160;
+}
+
+button[type='primary']:after {
+  display: none;
+}
+
+button[type='primary'][disabled] {
+  background-color: #b4ecce;
+}
+
+button[type='primary'].button-hover {
+  background-color: #06af56;
+}
+// @endif
+
+// @if alipay
+button {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #000000;
+  background-color: #f8f8f8;
+  font-size: inherit;
+  border: none;
+  height: auto;
+}
+
+button-small {
+  display: inline-block;
+  line-height: 2.3;
+  font-size: 13px;
+  padding: 0 1.34em;
+}
+
+button-primary {
+  color: #fff;
+  background-color: #108ee9;
+}
+
+button:before,
+button:after {
+  display: none;
+}
+
+input,
+textarea {
+  padding: 0;
+  display: block;
+  background: transparent;
+}
+// @endif

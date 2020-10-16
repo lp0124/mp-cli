@@ -1,0 +1,4 @@
+<view class="loadMore__wrap">
+  <view class="loadMore__loading" wx:if="{{showLoading}}"></view>
+  <view class="loadMore__end" wx:elif="{{showEnd}}">-- END --</view>
+</view>

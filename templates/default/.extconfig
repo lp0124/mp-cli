@@ -1,0 +1,87 @@
+{
+  "template": {
+    "shared": false,
+    "own": false
+  },
+  "platform": {
+    "weixin": false,
+    "alipay": false
+  },
+  "label": {
+    "live": false
+  },
+  "appid": {
+    "weixin": {
+      "dev": {
+        "project": "wxfc75936f1ef29d81",
+        "ext": {
+          "shared": "wx3e985877391caee2",
+          "own": "wx741f8a5de9c74d05"
+        }
+      },
+      "test": {
+        "project": "wxa3fcc24479267933",
+        "ext": {
+          "shared": "wx5e191fd769e42856",
+          "own": "wxf6453d0690d616f0"
+        }
+      },
+      "beta": {
+        "project": "wxa748404f43843943",
+        "ext": {
+          "shared": "wx5e191fd769e42856",
+          "own": "wxf6453d0690d616f0"
+        }
+      },
+      "master": {
+        "project": "wx97c50a8dd20482da",
+        "ext": {
+          "shared": "wxcbf16d41c44bda48",
+          "own": "wx1a2f112e2e85ce3f"
+        }
+      }
+    },
+    "alipay": {
+      "dev": {
+        "release": {
+          "shared": "2018112962385228",
+          "own": "2018112962385228"
+        },
+        "ext": {
+          "shared": "2019073166071340",
+          "own": "2019111469191303"
+        }
+      },
+      "test": {
+        "release": {
+          "shared": "2019031163536106",
+          "own": "2019031163536106"
+        },
+        "ext": {
+          "shared": "2018110662021483",
+          "own": "2018112962381272"
+        }
+      },
+      "beta": {
+        "release": {
+          "shared": "2019031163536106",
+          "own": "2019031163536106"
+        },
+        "ext": {
+          "shared": "2018110662021483",
+          "own": "2018112962381272"
+        }
+      },
+      "master": {
+        "release": {
+          "shared": "2021001161617347",
+          "own": "2021001166648018"
+        },
+        "ext": {
+          "shared": "2021001136686172",
+          "own": "2019120269525992"
+        }
+      }
+    }
+  }
+}

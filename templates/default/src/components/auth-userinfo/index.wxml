@@ -1,0 +1,26 @@
+<!-- @if weixin -->
+<button
+  wx:if="{{!update && (skip || $store.user_info.nickname)}}"
+  class="c-auth-userinfo__button"
+  hover-class="none"
+  bindtap="onGotUserInfo"
+>
+  <slot></slot>
+</button>
+<button
+  wx:else
+  class="c-auth-userinfo__button"
+  hover-class="none"
+  bindgetuserinfo="onGotUserInfo"
+  open-type="getUserInfo"
+  lang="zh_CN"
+>
+  <slot></slot>
+</button>
+<!-- @endif -->
+
+<!-- @if alipay -->
+<button class="c-auth-userinfo__button" hover-class="none" onTap="onGotUserInfo">
+  <slot></slot>
+</button>
+<!-- @endif -->

@@ -1,0 +1,18 @@
+<button
+  wx:if="{{ $store.isAuth || skip }}"
+  class="reset-button"
+  style="{{style}}"
+  bindtap="handleTap"
+>
+  <slot></slot>
+</button>
+<button
+  wx:else
+  class="reset-button"
+  style="{{style}}"
+  hover-class="none"
+  open-type="getPhoneNumber"
+  bindgetphonenumber="getPhoneNumber"
+>
+  <slot></slot>
+</button>

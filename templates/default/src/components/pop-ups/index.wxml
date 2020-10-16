@@ -1,0 +1,20 @@
+<view wx:if="{{innerShow}}" class="c-pop-ups" style="z-index: {{zIndex}}">
+  <view
+    wx:if="{{mask}}"
+    class="c-pop-ups__mask {{maskClass}}"
+    style="background: {{background}}; transition: {{'opacity ' + duration + 'ms ' + transition}}"
+    catchtap="close"
+    catchtouchmove="noop"
+    disable-scroll="{{true}}"
+  ></view>
+  <view class="c-pop-ups__wrap {{position}}">
+    <view
+      class="{{transitionClass}}"
+      style="{{transition !== 'none' && duration > 0 ? 'transition: transform ' + duration + 'ms ' + transition : ''}}"
+      catchtap="noop"
+      catchtouchmove="noop"
+    >
+      <slot></slot>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<button class="auth-mobile__button" a:if="{{disabled}}">
+  <slot></slot>
+</button>
+<button class="auth-mobile__button" a:elif="{{skip || $store.isAuth}}" onTap="getPhoneNumber">
+  <slot></slot>
+</button>
+<button
+  class="auth-mobile__button"
+  a:else
+  style="{{style}}"
+  open-type="getAuthorize"
+  onGetAuthorize="getPhoneNumber"
+  onError="onAuthError"
+  scope="phoneNumber"
+  hover-class="none"
+>
+  <slot></slot>
+</button>

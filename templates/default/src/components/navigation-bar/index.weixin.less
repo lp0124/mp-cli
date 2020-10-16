@@ -1,0 +1,126 @@
+@import '../../utils.less';
+.asCssImport('../../iconfont');
+
+.weui-navigation-bar {
+  --height: 44px;
+  --right: 190rpx;
+  overflow: hidden;
+}
+.weui-navigation-bar .android {
+  --height: 48px;
+  --right: 222rpx;
+}
+.weui-navigation-bar__inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: var(--height);
+  display: flex;
+  align-items: center;
+  padding-right: var(--right);
+  width: calc(100% - var(--right));
+}
+.weui-navigation-bar__inner .weui-navigation-bar__left {
+  position: relative;
+  width: var(--right);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+}
+.weui-navigation-bar__buttons {
+  padding: 0 22rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weui-navigation-bar__icon-back {
+  font-size: 24px;
+  &:active {
+    opacity: 0.5;
+  }
+}
+.weui-navigation-bar__icon-home {
+  display: inline-block;
+  width: 64rpx;
+  height: 64rpx;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 50%;
+  font-size: 40rpx;
+  line-height: 64rpx;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.65);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAoCAYAAABq13MpAAAEF0lEQVRYhc2Xz0sbQRTHZyeeix6EnpLci8YU6aUQ8N5L/4EY0ED/gYJekmNB8FhaSAyiZ2mhPRtReigaaA7FgyWNHo0/8OQh2Z3yXfLC+DK72WxG6oPJJtnZeZ957ztvZoVSylrrdrsrV1dXn3K5nBJCqOnpabW3t3fX7XbXe73eii0/1oABBeBMJqMcx/Gh0fB9a2tLAfxJQRPw/Pz8A2Ad/OTk5Nh13fdPAtp13QIBc1i9QSqNRuNnr9db+6/QFOGFhYUhyGQyOYgy/WcLPPaDtOigYV0GuCLqnU7nc7VaHQKfmZnxpTIJeGzg6+vrjwSsQ83NzanLy8sKsgAwAtf7Afz4+PgkbkWJLQm+6PCdIgydU1+Ao3pw+UBS6BsHPJYkTBoGMKKPPnySQeDIFJ6hSVqHhnM4QPp5urGZmICjgiMQ40Q8coSRSkQYoLoslpeXFYBGOTVpHE1K6WdpHPDIESZJ6MD5fN7f6aKmF/0o4qb1gM0nCnikRWcqawAGwLh6RNYAxyOOcTEm7gXJbCS0vuiQQt0BJDHJIQhjY8KVSmUoe1HkFioJvayRlqNqOCq4aXEWCoVQH0bdBUlic3PTCrAenCBwkp/J19AgqBLZbHZIb9BgHA1HBecaRyuVSkYZGjXMI0zANg/yHBwLsFarDQULWeCLc/CQLgldx48NrIMjqrpU9KDp4ANJ8DcOWsn7+/sttLOzs2+2pUENASM/9Xr9D/QcBO5DBy063srlshpVP+M2wHJZmH7jfRNZl6urq++azaYg82diMPzvOI7x3qTmeZ6kIeCDM5DvYrH47Pb2Ni3r9fpIlwQbNKFJzXEcL8wHTeTm5kZcXFxkpxqNxvednZ03vOPBwYE4PDx8MNPHMh7dVCol8vn8wKfneSKRSIhcLvc3k8l8mUqn019LpdJXA0+VoB8bnEcX0OVyeV0I0eF9E4nE1hQ++A3XdVcehW4865jYYFO2PLiuu9ZsNt8qpSS/l0wmf83OzhZt+bIG3Wq1couLi6+Qaimlr0OSU61We1koFKxBD0XFhgGYjPRqU3LWoJVSDgHy8mWSzCRmbTApZY9XF/qNOvwkoZVSCSqLhqu0uTEZoSdxoElicNV3PBtmhJZSugHbqRsC6+hgHDKo5ur9o07MWPKQag7QP8E99zyv0L/vep6X6DtzcRLTJ8onzauHvsPq2zjKZSxo7hTfd3d3xdHR0Qeqw4O3iL7d398PTZJsY2NDbm9vVzkoGQ5CZHq5HBuap6rdbvvNdHTkz/D7p6enfjNNKIpvboEL0XRA0iuDaeCg5/jzo4BHRdsIjQez2exd2AtBmPMg8KCzsn5Fn6WlpVDowS7GDQegdrv9+vz8/EXQxMJkgreRqJuKPlYqlfqdTqd/BJ7yhBD/AF7kALxFIyAvAAAAAElFTkSuQmCC);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 32rpx 28rpx;
+  &::after {
+    content: ' ';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 1rpx solid rgba(234, 234, 234, 0.65);
+  }
+  &:active {
+    background-color: #a3a3a3;
+    &::after {
+      border: 1rpx solid #969696;
+    }
+  }
+}
+.weui-navigation-bar__inner .weui-navigation-bar__center {
+  font-size: 17px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  flex: 1;
+  margin-left: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  overflow: hidden;
+  .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.weui-navigation-bar__inner .weui-navigation-bar__loading {
+  font-size: 0;
+}
+.weui-navigation-bar__inner .weui-navigation-bar__loading .weui-loading {
+  margin-left: 0;
+}
+.weui-navigation-bar__inner .weui-navigation-bar__right {
+  margin-right: 16px;
+}
+.weui-navigation-bar__placeholder {
+  height: var(--height);
+  background: #f8f8f8;
+  position: relative;
+  z-index: 50;
+}
+.navigation-bar {
+  &--fixed {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}

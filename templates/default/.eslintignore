@@ -1,0 +1,8 @@
+src/libs
+*.wxs
+*.sjs
+/dist
+/node_modules
+ci/node_modules
+/gulp-mp
+gulpfile.*

@@ -1,0 +1,17 @@
+// 使用 CSS 原生 @import 导入样式
+.asCssImport(@path) {
+  // @if weixin
+  @import (optional, css) '@{path}.wxss';
+  // @endif
+  // @if alipay
+  @import (optional, css) '@{path}.acss';
+  // @endif
+}
+
+@constant: constant(safe-area-inset-bottom);
+@env: env(safe-area-inset-bottom);
+// 兼容 iPhoneX
+.iPhoneX(@prop: padding-bottom, @defaults: '') {
+  @{prop}: if(@defaults = '', @constant, calc(@defaults + @constant));
+  @{prop}: if(@defaults = '', @env, calc(@defaults + @env));
+}

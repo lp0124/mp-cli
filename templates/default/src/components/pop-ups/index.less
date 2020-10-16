@@ -1,0 +1,71 @@
+.c-pop-ups {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  &__mask {
+    width: 100vw;
+    height: 100vh;
+    &--visible {
+      opacity: 1;
+    }
+    &--hidden {
+      opacity: 0;
+    }
+  }
+  &__wrap {
+    position: absolute;
+    &.center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.top,
+    &.bottom {
+      left: 0;
+    }
+    &.top {
+      top: 0;
+    }
+    &.bottom {
+      bottom: 0;
+    }
+    &.left,
+    &.right {
+      top: 0;
+    }
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+  .center-visible {
+    transform: scale(1) scaleZ(1);
+  }
+  .center-hidden {
+    transform: scale(0) scaleZ(1);
+  }
+  .top-visible,
+  .bottom-visible {
+    transform: translateY(0) translateZ(0);
+  }
+  .top-hidden {
+    transform: translateY(-100%) translateZ(0);
+  }
+  .bottom-hidden {
+    transform: translateY(100%) translateZ(0);
+  }
+  .left-visible,
+  .right-visible {
+    transform: translateX(0) translateZ(0);
+  }
+  .left-hidden {
+    transform: translateX(-100%) translateZ(0);
+  }
+  .right-hidden {
+    transform: translateX(100%) translateZ(0);
+  }
+}

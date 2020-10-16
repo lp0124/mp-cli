@@ -1,0 +1,14 @@
+<view class="navigation-bar {{fixed ? 'navigation-bar--fixed' : ''}}">
+  <view
+    class="navigation-bar__placeholder"
+    style="padding-top: {{ $store.system.statusBarHeight }}px; height: {{ $store.system.titleBarHeight }}px;"
+  ></view>
+  <view
+    class="navigation-bar__inner"
+    style="padding-top: {{ $store.system.statusBarHeight }}px; padding-left: {{ showHome || showBack || placeholderHomeBtn ? '40px' : '15px'}}; height: {{ $store.system.titleHeight }}px; color: {{ color }}; background: {{ background }}; font-weight: {{ $store.system.ios ? 500 : 400 }};"
+  >
+    <view a:if="{{ title }}" class="navigation-bar__title">{{ title }}</view>
+    <slot a:else></slot>
+    <view class="navigation-bar__right"></view>
+  </view>
+</view>

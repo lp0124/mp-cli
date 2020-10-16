@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "pop-ups": "/components/pop-ups/index"
+  }
+}

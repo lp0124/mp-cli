@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "prettier"],
+  "globals": {
+    "App": false,
+    "getApp": false,
+    "Page": false,
+    "getCurrentPages": false,
+    "Component": false,
+    "Behavior": false,
+    "wx": false,
+    "my": false,
+    "requirePlugin": false
+  },
+  "rules": {
+    "camelcase": "warn",
+    "eqeqeq": "warn",
+    "prefer-promise-reject-errors": "warn"
+  }
+}

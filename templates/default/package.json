@@ -1,0 +1,73 @@
+{
+  "name": "plus-microapp",
+  "version": "1.0.0",
+  "description": "店小铺 - 共享版小程序",
+  "scripts": {
+    "dev:weixin": "gulp --env dev --type shared --platform weixin --watch",
+    "dev:alipay": "gulp --env dev --type shared --platform alipay --watch",
+    "test:weixin": "gulp --env test --type shared --platform weixin --watch",
+    "test:alipay": "gulp --env test --type shared --platform alipay --watch",
+    "beta:weixin": "gulp --env beta --type shared --platform weixin --watch",
+    "beta:alipay": "gulp --env beta --type shared --platform alipay --watch",
+    "master:weixin": "gulp --env master --type shared --platform weixin --watch",
+    "master:alipay": "gulp --env master --type shared --platform alipay --watch",
+    "ci:dev": "node ci/index.js --env dev",
+    "ci:test": "node ci/index.js --env test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.zmcms.cn:PTFW/plus-microapp.git"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.js": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/generator": "^7.8.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-minify-constant-folding": "^0.5.0",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-transform-inline-consecutive-adds": "^0.4.3",
+    "dayjs": "^1.8.31",
+    "del": "^5.1.0",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "fs-extra": "^9.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-change": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-less": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-typescript": "^5.0.1",
+    "htmldom": "^3.0.4",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "minimist": "^1.2.0",
+    "miniprogram-api-typings": "^2.10.4",
+    "preprocess": "^3.1.0",
+    "prettier": "^1.18.2",
+    "redux": "^4.0.5",
+    "through2": "^3.0.1",
+    "typescript": "^3.8.3"
+  }
+}

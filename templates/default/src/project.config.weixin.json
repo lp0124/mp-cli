@@ -1,0 +1,139 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "autoAudits": false,
+    "coverView": true,
+    "checkSiteMap": false,
+    "enhance": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.10.4",
+  "appid": "wxa3fcc24479267933",
+  "projectname": "plus-microapp",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "id": -1,
+          "name": "共享-订单",
+          "pathName": "pages/shared-order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "共享-我的",
+          "pathName": "pages/shared-my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "共享-我的储值",
+          "pathName": "subpages/shared/stored-value/index",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "共享-优惠券",
+          "pathName": "subpages/shared/coupon/index",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "共享-会员卡",
+          "pathName": "subpages/shared/member/index",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "共享-我的收藏",
+          "pathName": "subpages/shared/collect/index",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "dev环境 零售&店小铺融合测试店",
+          "pathName": "pages/store/index",
+          "query": "scene=1000405",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "dev环境 独立零售测试啊",
+          "pathName": "pages/store/index",
+          "query": "scene=1000106",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "dev环境 融合测试优惠券",
+          "pathName": "pages/store/index",
+          "query": "scene=1000891",
+          "scene": null
+        },
+        {
+          "id": 0,
+          "name": "商品详情",
+          "pathName": "pages/goods/detail",
+          "query": "id=274&store_id=1001016",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "扫码进入",
+          "pathName": "pages/index/index",
+          "query": "q=https%3A%2F%2Fqr.zmcms.cn%2Fnqbpxo-goods%2FgMNUhHqx",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "直接进店铺",
+          "pathName": "pages/index/index",
+          "query": "type=1&store_id=1001016",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.auth-mobile-w {
+  width: 100vw;
+  background: #fff;
+  box-sizing: border-box;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  text-align: left;
+  line-height: 1.2;
+  .title {
+    padding: 35rpx 50rpx;
+    color: #000;
+    font-size: 34rpx;
+    &__head {
+      margin-bottom: 30rpx;
+      display: flex;
+      align-items: center;
+    }
+    &__logo {
+      width: 60rpx;
+      height: 60rpx;
+    }
+    &__name {
+      margin: 0 10rpx 0 20rpx;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      flex: 0 0 490rpx;
+      text-overflow: ellipsis;
+    }
+    &__tit {
+      font-size: 36rpx;
+      font-weight: bold;
+    }
+  }
+  .form {
+    margin: 0 50rpx;
+    font-size: 30rpx;
+    &__item {
+      height: 120rpx;
+      line-height: 120rpx;
+      display: flex;
+      align-items: center;
+    }
+    &__input {
+      flex: 1;
+      font-size: 30rpx;
+    }
+    &__btn--link {
+      flex: 0 0 170rpx;
+      text-align: right;
+      color: #408ce2;
+    }
+  }
+  .foot {
+    font-size: 28rpx;
+    margin: 30rpx 0 0 0;
+    // &__desc {
+    //   padding: 0 50rpx;
+    //   margin-bottom: 20rpx;
+    //   color: #666;
+    //   margin: 50rpx 0 30rpx 0;
+    //   line-height: 1.2;
+    // }
+    &__link {
+      color: #408ce2;
+    }
+    &__btns {
+      padding: 0 30rpx 40rpx 30rpx;
+      display: flex;
+    }
+    &__btn {
+      flex: 1;
+      height: 93rpx;
+      line-height: 93rpx;
+      font-size: 36rpx;
+      border-radius: 8rpx;
+      &--hollow {
+        margin-right: 16rpx;
+        color: #333;
+        background-color: #fff;
+        border: 2rpx solid #ddd;
+      }
+      &--primary {
+        border: 2rpx solid rgb(16, 142, 233);
+      }
+    }
+  }
+}

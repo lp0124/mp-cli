@@ -1,0 +1,58 @@
+<pop-ups show="{{isShow}}" position="bottom" zIndex="103" onClose="hide">
+  <view class="auth-mobile-w">
+    <view class="title">
+      <view class="title__head">
+        <image
+          class="title__logo"
+          src="{{$store.currentShop.logo ? $store.currentShop.logo + '?imageView2/1/w/60/h/60' : ''}}"
+        ></image>
+        <text class="title__name">{{$store.storeName}}</text>
+        <text>申请</text>
+      </view>
+      <view class="title__tit">获取你的手机号码</view>
+    </view>
+    <view class="form line-top">
+      <view class="form__item form__item-iphone line-bottom">
+        <input
+          class="form__input"
+          onInput="bindKeyInput"
+          data-key="form.mobile"
+          type="number"
+          maxlength="11"
+          placeholder="请输入手机号"
+          enableNative="{{false}}"
+        />
+      </view>
+      <view class="form__item form__item-code">
+        <input
+          class="form__input"
+          onInput="bindKeyInput"
+          data-key="form.verify_code"
+          type="number"
+          maxlength="11"
+          placeholder="请输入验证码"
+          enableNative="{{false}}"
+        />
+        <view class="form__btn--link" onTap="sendSms">获取验证码</view>
+      </view>
+    </view>
+    <view class="foot">
+      <!-- <view class="foot__desc"
+        >同意<text
+          class="foot__link"
+          onTap="navWebview"
+          data-src="https://render.alipay.com/p/f/fd-j0d5p2mx/index.html"
+          >《用户授权协议》</text
+        ></view
+      > -->
+      <view class="foot__btns">
+        <button class="foot__btn foot__btn--hollow" onTap="hide">
+          拒绝
+        </button>
+        <button type="primary" class="foot__btn foot__btn--primary" onTap="getPhoneNumber">
+          同意
+        </button>
+      </view>
+    </view>
+  </view>
+</pop-ups>
