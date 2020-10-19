@@ -2,22 +2,33 @@
 
 const program = require("commander")
 const inquirer = require("inquirer")
-const ora = require('ora')
 const logger = require("../lib/logger")
-const download = require('download-git-repo')
 const path = require('path')
+const memFs = require("mem-fs")
+const editor = require("mem-fs-editor")
+const fs = require('fs-extra')
 
 program.parse(process.argv)
 
 const rawName = program.args[0] || ''
-const templateName = 'lp0124/docker-vue'
+
+const store = memFs.create()
+const mfs = editor.create(store)
 
 main()
 
 async function main() {
   try {
     if (await confirmCreateProject()) {
-      downloadAndGenerate()
+      // 获取模板所有文件
+      const files = await getAllFilesInFloder(path.join(path.resolve(), 'templates/default'), [])
+      files.forEach(file => {
+        const outPath = file.replace(path.join(path.resolve(), 'templates/default'), path.join(path.resolve(), rawName))
+        mfs.copy(file, outPath)
+      })
+      mfs.commit(() => {
+        console.log('文件创建完成')
+      })
     }
   } catch (err) {
     logger.fatal(err)
@@ -40,17 +51,37 @@ async function confirmCreateProject() {
   return true
 }
 
-function downloadAndGenerate() {
-  const spinner = ora('downloading template')
-  spinner.start()
-
-  download(templateName, path.join(process.cwd(), rawName), {
-    clone: false
-  }, err => {
-    spinner.stop()
-
-    if (err) {
-      logger.fatal('Failed to download repo ' + templateName + ': ' + err.message.trim())
+function readDirWithFileTypes (floder) {
+  const list = fs.readdirSync(floder)
+  const res = list.map(name => {
+    const stat = fs.statSync(path.join(floder, name))
+    return {
+      name,
+      isDirectory: stat.isDirectory(),
+      isFile: stat.isFile()
     }
   })
+  return res
+}
+
+const getAllFilesInFloder = async (
+  floder,
+  filter
+) => {
+  let files = []
+  const list = readDirWithFileTypes(floder)
+
+  await Promise.all(
+    list.map(async item => {
+      const itemPath = path.join(floder, item.name)
+      if (item.isDirectory) {
+        const _files = await getAllFilesInFloder(itemPath, filter)
+        files = [...files, ..._files]
+      } else if (item.isFile) {
+        if (!filter.find(rule => rule === item.name)) files.push(itemPath)
+      }
+    })
+  )
+
+  return files
 }
