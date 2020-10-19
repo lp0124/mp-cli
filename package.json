@@ -1,11 +1,11 @@
 {
   "name": "@lp0124/mp-cli",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "小程序脚手架",
   "bin": {
-    "mp": "bin/mp.js"
+    "mp": "bin/mp"
   },
-  "main": "bin/mp.js",
+  "main": "bin/mp",
   "keywords": [
     "mp",
     "cli"
